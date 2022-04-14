@@ -5,7 +5,7 @@
 
 1. Create a function that accepts a string as parameter
 
-2. Use .split to make an array with each individual character and initial
+2. Use .split to make an array with each individual character and initialize
 that in a new variable equal to 'splitString'
 
 3. Use the .filter method to find every letter that meets the condition 
