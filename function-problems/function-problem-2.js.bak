@@ -9,7 +9,7 @@
 
 3. Execute .reduce on the array to compare each string to see which one is the longest and return that string to the function and a few extra "else" conditions in case there are equal lengths.
 
-4.  
+4.  And a final return which returns the longest word to the function
  */
 
 const longestWord = string => {
@@ -31,4 +31,4 @@ const longestWord = string => {
 	return longest;
 };
 
-console.log(longestWord(1111111));
+console.log(longestWord("Hey script, figure out which of these is the longest words please: Massachusetts."));

@@ -31,4 +31,4 @@ const longestWord = string => {
 	return longest;
 };
 
-console.log(longestWord(1111111));
+console.log(longestWord("Hey script, figure out which of these is the longest words please: Massachusetts"));
