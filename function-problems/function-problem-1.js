@@ -8,18 +8,21 @@
 2. Use .split to make an array with each individual character and initialize
 that in a new variable equal to 'splitString'
 
-3. Use the .filter method to find every letter that meets the condition
+3. Use .map on the 'firstArray' to turn each element (which are strings) to lowercase by using .toLowerCase on each element
+
+4. Use the .filter method to find every letter that meets the condition
 and run .include to test if each one is a vowel
 
-4. Then return the length property of the vowels variable which gives us
+5. Then return the length property of the vowels variable which gives us
 the amount of vowels in the string
 
  */
 
 const stringConvert = string => {
-    let splitString = string.split("");
-    splitString.toLowerCase;
-    let vowels = splitString.filter(letter => {
+    let firstArray = string.split("");
+    let secondArray = firstArray.map(string =>
+	  string.toLowerCase());
+    let vowels = secondArray.filter(letter => {
         return ["a", "e", "i", "o", "u"].includes(letter);
     })
         return vowels.length;

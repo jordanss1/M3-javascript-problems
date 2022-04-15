@@ -8,7 +8,9 @@
  */
 
 const specialLetter = (string, letter) => {
-    let letterArray = string.split("");
+    let firstArray = string.split("");
+	let letterArray = firstArray.map(string =>
+	  string.toLowerCase());
     let specLetter = letterArray.every((arr, letter) => 
 	  letter.includes(arr));
 	console.log(specLetter);
