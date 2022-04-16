@@ -4,17 +4,18 @@
 /*
 1. Create first function line with two parameters
 
-2. Initialize a variable with the array of every individual character of the string, so we can use the array to search for our specific letter 
+2. Initialize a variable with the array of every individual character of the string using split method on it, so we can use the array to search for our specific letter 
+
+3. Init
  */
 
 const specialLetter = (string, letter) => {
     let firstArray = string.split("");
 	let letterArray = firstArray.map(string =>
 	  string.toLowerCase());
-	console.log(letterArray);
-    let specLetter = letterArray.every((arr, letter) => 
+    let specLetter = letterArray.filter(arr => 
 	  letter.includes(arr));
-	console.log(specLetter);
+	console.log(specLetter.length);
 }
 
-console.log(specialLetter("Oranges, apples, pears, grapes"));
+console.log(specialLetter("Oranges, apples, pears, grapes", "s"));
