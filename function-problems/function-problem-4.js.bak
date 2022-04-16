@@ -8,16 +8,22 @@
 
 2. Create a for loop that iterates from 1 to 100 with a stopping condition that stops the loop before it can loop past 100 (1 <= 100)
 
-3. Create if else if conditions with a modulo operator in the first two  
+3. Create if else if conditions with a modulo operator in the first two conditions that check to see if "i" has a remainder equal to the value of "0" when it divides into 3 or 5
+
+4. With a code block for each that logs "fizz" or "buzz" to the console
+
+4. Create an else statement which logs every other integer to the console
 
 */
 
 const multiples = () => {
 	for(let i = 1; i <= 100; i++)
-		if (i % 3 === 0) {
-			console.log(`Fizz`);
+		if (i % 3 === 0 && i % 5 === 0){
+			console.log("FizzBuzz");
 		} else if (i % 5 === 0) {
 			console.log("Buzz");
+		} else if (i % 3 === 0){
+			console.log("Fizz");
 		} else {
 			console.log(`${i}`);
 		}
