@@ -14,7 +14,9 @@ reference to the <p> tag in the HTML I needed to use. I appended
 style to the variable and backgroundColor in order to style css in the code 
 block
 
-4. I called onclick on the "button1" globally scoped object 
+4. I called an onclick event on the "button1" globally scoped object and
+ assigned it with the changeColor function, which styles the ackground 
+ red on-click of the button
 */
 
 const p1 = document.querySelector("#p1");
