@@ -1,8 +1,7 @@
 const options = () => {
-	let select = document.querySelector("#dog-names");
-	let p1 = document.querySelector("p");
-	let dogNames = select.querySelectorAll("option");
-	console.log(dogNames);
+	let dogNames = document.querySelectorAll("#dog-names");
+	let selected = dogNames.selectedIndex;
+	
 };
 
 options();
