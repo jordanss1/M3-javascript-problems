@@ -25,7 +25,6 @@ let dogNames = document.querySelector("#dog-names");
 const options = () => {
 	let selected = dogNames.selectedIndex;
 	let p1 = document.querySelector("p");
-	let p2 = document.getElementById("#p2")
 	p1.innerText = `${dogNames.options[selected].text} is the option selected and there 
 	are ${dogNames.length} options total`;
 };
