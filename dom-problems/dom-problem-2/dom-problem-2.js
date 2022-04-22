@@ -9,7 +9,7 @@ needed to it's variable
 2. Created a function with the anchor from the HTML, called with querySelector and locally 
 scoped to keep global namespace cleaner 
 
-3. Initialized the href attribute of "anc1" to "href1" and executed an alert on the following
+3. Initialized the href attribute of "anchor1" to "href1" and executed an alert on the following
 line with the href in a message
 
 */
@@ -17,8 +17,8 @@ line with the href in a message
 const button1 = document.querySelector("#button1");
 
 const hrefGet = () => { 
-	const anc1 = document.querySelector("#anc1");
-	let href1 = anc1.href;
+	const anchor1 = document.querySelector("#anc1");
+	let href1 = anchor1.href;
 	alert(href1);
 }
 	

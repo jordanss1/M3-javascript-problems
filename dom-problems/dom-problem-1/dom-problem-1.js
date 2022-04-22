@@ -14,15 +14,15 @@ the <p> tag in the HTML I needed to use. I appended style to the variable and
 backgroundColor in order to style css in the code block
 
 4. I called an onclick event on the "button1" globally scoped object and assigned it 
-with the changeColor function, which styles the ackground red on-click of the button
+with the changeBGColor function, which styles the ackground red on-click of the button
 */
 
 const p1 = document.querySelector("#p1");
 
 const button1 = document.querySelector("#button1");
 
-const changeColor = () => {
+const changeBGColor = () => {
 	p1.style.backgroundColor = "red";
 };
 
-button1.onclick = changeColor; 
+button1.onclick = changeBGColor; 

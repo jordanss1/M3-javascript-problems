@@ -14,7 +14,7 @@ index of the select tag that is chosen. Initialised the p tag to its own variabl
 text of the selected option and the total number of options.
 
 4. Finally attached the onclick event to our select element so everytime an option is 
-chosen in the dropdown, onchange runs the "options" function
+chosen in the dropdown, onchange runs the "optionsText" function
 
 
 
@@ -22,11 +22,11 @@ chosen in the dropdown, onchange runs the "options" function
 
 let dogNames = document.querySelector("#dog-names");
 
-const options = () => {
+const optionsText = () => {
 	let selected = dogNames.selectedIndex;
 	let p1 = document.querySelector("p");
 	p1.innerText = `${dogNames.options[selected].text} is the option selected and there 
 	are ${dogNames.length} options total`;
 };
 
-dogNames.onchange = options;
+dogNames.onchange = optionsText;

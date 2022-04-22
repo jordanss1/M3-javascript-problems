@@ -18,14 +18,12 @@ the amount of vowels in the string
 
  */
 
-const stringConvert = string => {
-    let firstArray = string.split("");
-    let secondArray = firstArray.map(string =>
-	  string.toLowerCase());
-    let vowels = secondArray.filter(letter => {
+const vowelCount = string => {
+    let arrayOfCharacters = string.toLowercase().split("");
+    let vowels = arrayOfCharacters.filter(letter => {
         return ["a", "e", "i", "o", "u"].includes(letter);
     })
         return vowels.length;
 };
 
-console.log(stringConvert("Everyone, why don't you try and split this string into vowels, please?"));
+console.log(vowelCount("Everyone, why don't you try and split this string into vowels, please?"));
