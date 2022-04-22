@@ -13,7 +13,7 @@ and if so, to call .toString and .toLowerCase and then back to an array with
 const removeDuplicates = arr => {
 	for (let i = 0; i < arr.length; i++) {
 		if (typeof arr[i] === "string") {
-			let lowerCaseArr = arr.toString()//toLowerCase().split(" ");
+			let lowerCaseArr = arr.toString().toLowerCase().split(" ");
 			return lowerCaseArr;
 		}
 	}
