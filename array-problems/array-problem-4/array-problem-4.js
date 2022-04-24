@@ -22,6 +22,7 @@ code executes to push those elements into "finalNumberArray". We then return tha
 */
 
 const removeDuplicates = arr => {
+	let finalNumberArray = [];
 	for (let i = 0; i < arr.length; i++) {
 		if (typeof arr[i] === "string") {
 			let lowerCaseStr = arr.toString().toLowerCase();
@@ -33,21 +34,17 @@ const removeDuplicates = arr => {
 				}
 			}
 			return finalStringArray;
-		}
-}	let finalNumberArray = [];
-	for (let i = 0; i < arr.length; i++) {
-		if (typeof arr[i] === "number") {
+		} else if (typeof arr[i] === "number") {
 			for (let i = 0; i < arr.length; i++) {
 				if (!finalNumberArray.includes(arr[i])) {
 					finalNumberArray.push(arr[i]);
 				}
 			}	
 		}
-		return finalNumberArray;
-	}
-	
+			return finalNumberArray;
+}
 };
 
 
 
-console.log(removeDuplicates([1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6]));
+console.log(removeDuplicates(["fine", "fine", "green"]));
