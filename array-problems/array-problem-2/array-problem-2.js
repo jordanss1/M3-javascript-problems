@@ -12,7 +12,7 @@ of the function
 
 4. The array passed as an argument to our function appended by the .join method with a
 comma and a space as the seperator, which is then assigned to "string". This takes each element of an
-array and joins them with our seperator.
+array and joins them with our seperator into a string.
 
 5. Two console logged versions of the function, one with an array referenced by a variable
 and one with a fresh array passed as an argument
@@ -22,8 +22,7 @@ and one with a fresh array passed as an argument
 let array = [2, 2, 3];
 
 const tooString = (arr) => {
-	let string = "";
-	return string = arr.join(", ");
+	return arr.join(", ");
 }
 
 console.log(tooString([1, 2, 3]))
