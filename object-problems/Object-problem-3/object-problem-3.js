@@ -19,12 +19,12 @@ console logged it on the next line of code giving us the length of the object.
 const book = {
 	author: "unknown",
 	totalPages: 5001,
-	madeIn1900s: true
-}
+	madeIn1900s: true,
+};
 
 const lengthOfObject = obj => {
 	let objectArray = Object.keys(obj).length;
-	console.log(objectArray);
-}
+	return objectArray;
+};
 
-lengthOfObject(book);
+console.log(lengthOfObject(book));
