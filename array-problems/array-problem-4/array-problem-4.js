@@ -5,46 +5,37 @@
 1. Initialized a function expression to variable removeDuplicates with a 
 parameter of "arr" for use for passed arrays
 
-2. Created an if statement that checks if the elements in the array are strings 
-and if so, to call .toString and .toLowerCase on the array and assign it to "lowerCaseStr".
-Now that our string is lowercase, we want it as an array again with each element as before,
-so we use trhe .split method with a comma seperator which returns the array now lowercased.
+2. Initialise an empty array "finalArray" which will be used to pass each element that is a string or number
+without any duplicate elements
 
-3. We assign "finalStringArray" to an empty array and create our last for loop, which loops through
-our array, the if statement checks if the elements are not included in the "finalStringArray"
-and pushes those elements into our empty array, removing any duplicates.
+3. Created a for loop to loop every index of the passed array with a nested if else if condition that checks if the 
+current looped element is a string or number
 
-4. We define "finalNumberArray" to an empty array. Our last for loop checks if each element
-is a number, if so, another for loop is created to loop through the passed array to determine
-if those elements are NOT included in "finalNumberArray". If the element is not included our
-code executes to push those elements into "finalNumberArray". We then return that array.
+4. Called the "findUniqueElement" function which accepts two parameters, one for the array "finalArray" and one for the 
+current looped element. An if condition in the function checks if that item is not in the passed array with the includes 
+method. If it is not included the following line of code pushes that element into the passed array "finalArray"
 
+5. This is done for every element of the passed array in "removeDuplicates" until the array is looped, once looped, finalArray
+is returned to the function, giving us our array without duplicates/
 */
 
 const removeDuplicates = arr => {
-	let finalNumberArray = [];
+	let finalArray = [];
 	for (let i = 0; i < arr.length; i++) {
 		if (typeof arr[i] === "string") {
-			let lowerCaseStr = arr.toString().toLowerCase();
-			let lowerCaseArr = lowerCaseStr.split(",");
-			let finalStringArray = [];
-			for (let i = 0; i < lowerCaseArr.length; i++) {
-				if (!finalStringArray.includes(lowerCaseArr[i])) {
-					finalStringArray.push(lowerCaseArr[i]);
-				}
-			}
-			return finalStringArray;
+			findUniqueElement(finalArray, arr[i]);
 		} else if (typeof arr[i] === "number") {
-			for (let i = 0; i < arr.length; i++) {
-				if (!finalNumberArray.includes(arr[i])) {
-					finalNumberArray.push(arr[i]);
-				}
-			}	
+			findUniqueElement(finalArray, arr[i]);
 		}
-			return finalNumberArray;
-}
+	}
+	return finalArray;
 };
 
+const findUniqueElement = (arrOfItems, item) => {
+	if (!arrOfItems.includes(item)) {
+		arrOfItems.push(item);
+	}	
+}
 
-
-console.log(removeDuplicates(["fine", "fine", "green"]));
+console.log(removeDuplicates([3, 3, 4, "fine", "fine", "green"]));
+console.log(removeDuplicates([5, 4, 3, 3, 5]));
